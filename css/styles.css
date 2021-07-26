@@ -1,0 +1,298 @@
+/* set the box-sizing for all elements to border-box: */
+* {
+    box-sizing: border-box;
+}
+
+/* set a radial-gradient background for the <header> and <footer> elements, and set the opacity of both elements: */
+header, footer {
+    background: radial-gradient(#F4EFD2, #F3D944, #D8E33D, #91BC3C);
+    opacity: 0.9;
+}
+
+/* define rounded corners on the <header>, <img>, <section id='mission'>, <h1>, <h2>, <h3>, <h4>, <h5>, <h6>, <figcaption>, <section id='contact'>, and <footer> elements: */
+header, img, #mission, h1, h2, h3, h4, h5, h6, figcaption, #contact, footer {
+    border-radius: 5px;
+}
+
+/* define the position, height, display, vertical content alignment, horizontal content alignment, width, and z-index of the <header> element: */
+header {
+    position: fixed;
+    height: 200px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    z-index: 1;
+}
+
+/* define the display, horizontal positioning, border, and maximum width of the header <img> element: */
+header img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #24310C;
+    max-width: 764px;
+}
+
+/* define the width of the header <img> and the <ul> element on screens that are no greater than 800 pixels wide: */
+@media only screen and (max-width: 800px) {
+    header img, ul {
+        width: 600px;
+    }
+}
+
+/* define the width of the header <img> and the <ul> element on screens that are no greater than 700 pixels wide: */
+@media only screen and (max-width: 700px) {
+    header img, ul {
+        width: 500px;
+    }
+}
+
+/* define the width of the header <img> and the <ul> element on screens that are no greater than 600 pixels wide: */
+@media only screen and (max-width: 600px) {
+    header img, ul {
+        width: 400px;
+    }
+}
+
+/* define the width of the header <img> and the <ul> element on screens that are no greater than 500 pixels wide: */
+@media only screen and (max-width: 500px) {
+    header img, ul {
+        width: 300px;
+    }
+}
+
+/* define the width and display of the <nav> element, and define the horizontal and vertical positioning of its child elements: */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+/* define the margin, display, horizontal positioning, and maximum width of the nav <ul> element, and define the horizontal positioning
+and wrapping of its child elements: */
+nav ul {
+    margin: 0;
+    display: inline-flex;
+    justify-self: center;
+    max-width: 764px;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+/* define the display of the nav <li> elements: */
+nav li {
+    display: inline-flex;
+}
+
+/* define the font, font size, margin, and padding for <li>, <p>, and <figcaption> elements */
+li, p, figcaption {
+    font-family: 'Zilla Slab', serif;
+    font-size: 1.5em;
+    margin: 10px 0 0 0;
+    padding: 0 10px;
+}
+
+/* define the border, rounded corners, and padding of <a> elements */
+a {
+    border: 1px solid #24310C;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* define the font weight, color, and background color of unvisited links: */
+a:link {
+    font-weight: bold;
+    color: #91BC3C;
+    background-color: #F4EFD2;
+}
+
+/* define the color of visited links: */
+a:visited {
+    color: #24310C;
+}
+
+/* define the background color and color of <a> elements when the cursor is hovered thereon: */
+a:hover {
+    background-color: #24310C;
+    color: #F4EFD2;
+}
+
+/* define the color of active links: */
+a:active {
+    color: #F3D944;
+}
+
+/* remove the border for the <a> elements that are used to offset the fixed <header> when the internal page links are clicked: */
+a[id="offset_mission"], a[id="offset_beverages"], a[id="offset_team"] {
+    border: none;
+}
+
+/* add 200px of top padding to internal page anchors when the user navigates thereto so that the target <section> elements
+are correctly displayed (i.e. not hidden behind the 200px-tall fixed <header>): */
+:target {
+    padding-top: 200px;
+}
+
+/* sets the background image, position, margin, display, maximum width, minimum height, flex direction, and vertical alignment of the <section id='mission'> element: */
+#mission {
+    background-image: url("../images/mission_background.png");
+    position: relative;
+    top: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-basis: 1200px;
+    max-width: 1200px;
+    min-height: 800px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* sets the horizontal text alignment and width of the <div id='mission_statements'> element: */
+#mission_statements {
+    text-align: center;
+    width: 100%;
+}
+
+/* defines the font family, font size, horizontal alignment, and font weight of <h1> elements: */
+h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 4em;
+    font-weight: 700;
+}
+
+/* defines the top padding of <h2> elements: */
+h2 {
+    padding-top: 10px;
+}
+
+/* removes bottom left and bottom right rounded corners from: the <h1> element inside <div id='mission_statements'>; the <h2> element
+inside <section id='beverages'>; the <h2> element inside the <section id='contact'>; and the first <h5> element: */
+#mission_statements h1, #beverages h2, #contact h2, h5:first-of-type {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* removes top left and top right rounded corners from: the <h2> element inside <div id='mission_statements'>; the <h3> element inside
+<section id='beverages'>; the first <h5> element; and the last <h5> element: */
+#mission_statements h2, #beverages h3, h5:first-of-type, h5:last-of-type {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* set the maximum width of the <h2> and <h3> elements inside the <section id='beverages'>, and the <h2> element inside the
+ <section id='team'>, and position those elements centrally along the horizontal axis: */
+#beverages h2, #beverages h3, #team h2 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* defines the background color, color, margin, and text alignment of <h1>, <h2>, <h3>, <h4>, <h5>, and <h6> elements: */
+h1, h2, h3, h4, h5, h6 {
+    background-color: #F4EFD2;
+    color: #24310C;
+    margin: 0 10px;
+    text-align: center;
+}
+
+/* defines the font family, font size, letter spacing, and font weight of <h2>, <h3>, <h4>, <h5>, and <h6> elements: */
+h2, h3, h4, h5, h6 {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 3em;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+/* defines the positioning, width, and color of the <hr> elements: */
+hr {
+    position: relative;
+    top: 200px;
+    width: 100%;
+    color: #24310C;
+}
+
+/* set the position of the <section id='beverages'>, <section id='team'>, <section id='contact'>, and the <footer> elements
+to take into account the fixed <header>: */
+#beverages, #team, #contact, footer {
+    position: relative;
+    top: 200px;
+}
+
+/* defines the display, flex direction, flex wrap, horizontal content alignment, vertical item alignment, and flex-basis of the <div id='products'> element: */
+#products, #staff {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: start;
+    flex-basis: 1000px;
+}
+
+/* defines the margin and width of the <figure> elements: */
+figure {
+    margin: 10px;
+    width: 300px;
+}
+
+/* defines the height and width of the figure <img> elements: */
+figure img {
+    height: 450px;
+    width: 300px;
+}
+
+/* defines the text alignment, top margin, font weight, and the background color of the <figcaption> elements: */
+figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    background-color: khaki;
+}
+
+/* define the background color, width, and display of the <span> elements: */
+span {
+    background-color: #F4EFD2;
+    width: 100%;
+    display: block;
+}
+
+/* define the central horizontal positioning and the maximum width of the <p> element inside the
+<section id='beverages'>: */
+#beverages p {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+/* define the curvature of <img> elements inside the <section id='team'>: */
+#team img {
+    border-radius: 50%;
+}
+
+/* define the background color of the <section id='contact'>: */
+#contact {
+    background-color: #F4EFD2;
+}
+
+/* define the margin and width of the <figure> elements inside the <section id='contact'>: */
+#contact figure {
+    margin: 10px auto;
+    width: 350px;
+}
+
+/* define the width and height of the <img> elements within the <section id='contact'> <figure> elements: */
+#contact figure img {
+    width: 350px;
+    height: 275px;
+}
+/* defines the horizontal alignment, font weight, and padding of footer <p> elements: */
+footer p {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}

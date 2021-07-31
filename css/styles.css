@@ -22,7 +22,7 @@ header {
     flex-flow: column wrap;
     justify-content: center;
     align-content: center;
-    width: 100%;
+    width: 99%;
     z-index: 1;
 }
 
@@ -126,7 +126,13 @@ a:active {
 }
 
 /* remove the border for the <a> elements that are used to offset the fixed <header> when the internal page links are clicked: */
-a[id="offset_mission"], a[id="offset_beverages"], a[id="offset_team"] {
+a[id="offset_beverages"], a[id="offset_team"] {
+    border: none;
+    display: inline-block;
+}
+
+a[id="offset_mission"] {
+    display: inline;
     border: none;
 }
 

@@ -296,6 +296,13 @@ span {
     width: 350px;
     height: 275px;
 }
+
+/* specifies that the <h2> and <h5> elements inside the <section id='contact'> will break mid-word so that the content doesn't overspill
+on the horizontal axis:  */
+#contact h2, #contact h5 {
+    word-wrap: break-word;
+}
+
 /* defines the horizontal alignment, font weight, and padding of footer <p> elements: */
 footer p {
     text-align: center;

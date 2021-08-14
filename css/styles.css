@@ -126,12 +126,6 @@ a:active {
     color: #F3D944;
 }
 
-/* move the 'offset_mission' page anchor 200px down from its relative position, to take the 200-pixel tall fixed <header> into account: */
-a[id="offset_mission"] {
-    position: relative;
-    top: 200px;
-}
-
 /* remove the border for the <a> elements that are used to offset the fixed <header> when the internal page links are clicked; 
    also sets the width, horizontal text alignment, display, font family, and font size properties of these elements: */
 a[id="offset_mission"], a[id="offset_beverages"], a[id="offset_team"] {
@@ -141,6 +135,12 @@ a[id="offset_mission"], a[id="offset_beverages"], a[id="offset_team"] {
     display: inline-block;
     font-family: 'Zilla Slab', serif;
     font-size: 1em;
+}
+
+/* move the 'offset_mission' page anchor 200px down from its relative position, to take the 200-pixel tall fixed <header> into account: */
+a[id="offset_mission"] {
+    position: relative;
+    top: 200px;
 }
 
 /* sets a height value of 200px to internal page anchors when the user navigates thereto so that the target <section> elements

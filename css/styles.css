@@ -126,21 +126,53 @@ a:active {
     color: #F3D944;
 }
 
-/* remove the border for the <a> elements that are used to offset the fixed <header> when the internal page links are clicked: */
-a[id="offset_beverages"], a[id="offset_team"] {
+/* remove the border for the <a> elements that are used to offset the fixed <header> when the internal page links are clicked; 
+   also sets the width, horizontal text alignment, display, font family, and font size properties of these elements: */
+a[id="offset_mission"], a[id="offset_beverages"], a[id="offset_team"] {
     border: none;
+    width: 100%;
+    text-align: center;
     display: inline-block;
+    font-family: 'Zilla Slab', serif;
+    font-size: 1em;
 }
 
-a[id="offset_mission"] {
-    display: inline;
-    border: none;
-}
-
-/* add 200px of top padding to internal page anchors when the user navigates thereto so that the target <section> elements
-are correctly displayed (i.e. not hidden behind the 200px-tall fixed <header>): */
+/* sets a height value of 200px to internal page anchors when the user navigates thereto so that the target <section> elements
+are correctly displayed (i.e. not hidden behind the 200px-tall fixed <header>); also ensures that the text will be centred vertically, 
+and sets border, background color, and color properties: */
 :target {
-    padding-top: 200px;
+    border: 2px solid #91BC3C;
+    border-radius: 5px;
+    color: #F4EFD2;
+    background-color: #24310C;
+    height: 200px;
+    line-height: 200px;
+}
+
+/* adds text content to the page anchor that offsets the fixed <header> when the 'mission' <section> is navigated to: */
+a[id="offset_mission"]:target::after {
+    content: "~ Lar Tea: Mission ~";
+}
+
+/* adds text content to the page anchor that offsets the fixed <header> when the 'beverages' <section> is navigated to: */
+a[id="offset_beverages"]:target::after {
+    content: "~ Lar Tea: Beverages ~";
+}
+
+/* adds text content to the page anchor that offsets the fixed <header> when the 'team' <section> is navigated to: */
+a[id="offset_team"]:target::after {
+    content: "~ Lar Tea: Team ~";
+}
+
+/* define the background color of the <a> elements whose purpose is to offset the fixed <header> when the cursor is hovered thereon: */
+a[id="offset_mission"]:hover, a[id="offset_beverages"]:hover, a[id="offset_team"]:hover {
+    background-color: transparent;
+}
+
+/* define the background color of the <a> elements whose purpose is to offset the fixed <header> when they are the target of internal page navigation 
+   and the cursor is hovered thereon: */
+a[id="offset_mission"]:target:hover, a[id="offset_beverages"]:target:hover, a[id="offset_team"]:target:hover {
+    background-color: #24310C;
 }
 
 /* sets the background image, position, margin, display, maximum width, minimum height, flex direction, and vertical alignment of the <section id='mission'> element: */
